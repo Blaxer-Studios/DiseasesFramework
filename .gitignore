@@ -1,24 +1,24 @@
-# Archivos de compilación temporal
+# Temporary compilation files
 [Bb]in/
 [Oo]bj/
 *.user
 *.userosscache
 *.sln.docstates
 
-# Archivos de configuración local de Visual Studio
+# Visual Studio local configuration files
 .vs/
 *.suo
 *.ide
 *.sqlite
 *.db
 
-# Archivos de caché y herramientas de análisis (ReSharper, Rider, etc.)
+# Cache files and analysis tools (ReSharper, Rider, etc.)
 _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
 .idea/
 
-# Archivos temporales del sistema operativo
+# Temporary operating system files
 .DS_Store
 .DS_Store?
 ._*
@@ -28,6 +28,9 @@ ehthumbs.db
 Thumbs.db
 Desktop.ini
 
-# Archivos de Crash y Logs locales
+# Crash Files and Local Logs
 *.log
 *.crash
+
+# Unnecessary folders and files
+Defs/

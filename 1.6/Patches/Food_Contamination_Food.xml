@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[ingestible/foodType="Meal" or @ParentName="MealBase" or defName="Pemmican" or defName="Kibble"]/comps</xpath>
+
+                <match Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[ingestible/foodType="Meal" or @ParentName="MealBase" or defName="Pemmican" or defName="Kibble"]/comps</xpath>
+                    <value>
+                        <li Class="DiseasesFramework.InfectionVectors.CompProperties_ContaminatedFood">
+                            <sendNotification>true</sendNotification>
+                            <useLetterInsteadOfMessage>false</useLetterInsteadOfMessage>
+                        </li>
+                    </value>
+                </match>
+
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[ingestible/foodType="Meal" or @ParentName="MealBase" or defName="Pemmican" or defName="Kibble"]</xpath>
+                    <value>
+                        <comps>
+                            <li Class="DiseasesFramework.InfectionVectors.CompProperties_ContaminatedFood">
+                                <sendNotification>true</sendNotification>
+                                <useLetterInsteadOfMessage>false</useLetterInsteadOfMessage>
+                            </li>
+                        </comps>
+                    </value>
+                </nomatch>
+            </li>
+
+        </operations>
+    </Operation>
+</Patch>
