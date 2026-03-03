@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ModMetaData>
     <name>Diseases Framework</name>
-    <author>Romazea</author>
-    <packageId>romazea.diseases.framework</packageId>
+    <author>Romazea, Blaxer Studios</author>
+    <packageId>BlaxerStudios.DiseasesFramework.Core</packageId>
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
     <modVersion>1.0.0</modVersion>
     <description>
-A framework for RimWorld modders. It allows you to create complex diseases, custom methods of contagion, mutations, and specific cures using only XML files.
-    
-For Modders
-    
-Check the wiki on GitHub for documentation and examples of XML tags you can use in your own mods.
-    
-For Players:
-    
-This mod does not add diseases on its own. It is a requirement (dependency) for other mods that use this code. Please place it as high as possible in your load order.
+The foundational library for biological challenges in RimWorld.
+
+Developed by Blaxer Studios, this framework provides high-performance, modular tools for implementing complex disease transmission vectors. Our goal is to move beyond simple "random events" and create a truly interconnected biological ecosystem on the Rim.
+
+### Features:
+- Food Contamination Vector: Universal system for meals, kibble, and rations.
+- Deep Persistence: Infection data persists through save cycles and stack splitting.
+- Hybrid Notifications: Configurable messages or urgent letters.
+
+### For Modders:
+Check our GitHub repository for technical documentation and examples on how to implement your own contagious diseases using our custom components.
+
+### For Players:
+This mod is a code library and does not add diseases on its own. It is a mandatory requirement for other mods that use this framework. Please place it at the top of your load order, right after Harmony.
     </description>
+
     <modDependencies>
         <li>
             <packageId>brrainz.harmony</packageId>
