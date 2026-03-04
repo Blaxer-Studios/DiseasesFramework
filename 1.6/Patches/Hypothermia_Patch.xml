@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/HediffDef[defName="Hypothermia"]/hediffClass</xpath>
+
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/HediffDef[defName="Hypothermia"]/hediffClass</xpath>
+                    <value>
+                        <hediffClass>HediffWithComps</hediffClass>
+                    </value>
+                </match>
+
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/HediffDef[defName="Hypothermia"]</xpath>
+                    <value>
+                        <hediffClass>HediffWithComps</hediffClass>
+                    </value>
+                </nomatch>
+            </li>
+
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/HediffDef[defName="Hypothermia"]/comps</xpath>
+
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/HediffDef[defName="Hypothermia"]</xpath>
+                    <value>
+                        <comps />
+                    </value>
+                </nomatch>
+            </li>
+
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/HediffDef[defName="Hypothermia"]/comps</xpath>
+                <value>
+                    <li Class="DiseasesFramework.InfectionVectors.HediffCompProperties_TemperatureInfection">
+                        <minSeverity>0.15</minSeverity>
+                        <diseaseToApply>Flu</diseaseToApply>
+                        <chancePerCheck>1.0</chancePerCheck>
+                        <checkInterval>60</checkInterval>
+                        <sendNotification>true</sendNotification>
+                        <useLetterInsteadOfMessage>false</useLetterInsteadOfMessage>
+                    </li>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+</Patch>

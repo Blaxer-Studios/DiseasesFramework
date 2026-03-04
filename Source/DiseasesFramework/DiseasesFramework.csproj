@@ -341,6 +341,7 @@
     <Compile Include="InfectionVectors\CompContaminatedFood.cs" />
     <Compile Include="InfectionVectors\HediffComp_AuraContagion.cs" />
     <Compile Include="InfectionVectors\HediffComp_DefensiveContagion.cs" />
+    <Compile Include="InfectionVectors\HediffComp_TemperatureInfection.cs" />
     <Compile Include="InfectionVectors\HediffComp_IngestionContagion.cs" />
     <Compile Include="InfectionVectors\HediffComp_OffensiveContagion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
