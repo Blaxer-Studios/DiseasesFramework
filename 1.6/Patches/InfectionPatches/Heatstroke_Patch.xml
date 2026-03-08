@@ -34,7 +34,8 @@
                 <value>
                     <li Class="DiseasesFramework.InfectionVectors.HediffCompProperties_TemperatureInfection">
                         <minSeverity>0.35</minSeverity>
-                        <diseaseToApply>Flu</diseaseToApply>
+                        <diseaseToApply IsNull="True" />
+                        <!-- If you want to assign a heatstroke illness, you must close the label and assign the illness -->
                         <chancePerCheck>1.0</chancePerCheck>
                         <checkInterval>60</checkInterval>
                         <sendNotification>true</sendNotification>
