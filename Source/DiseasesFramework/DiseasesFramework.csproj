@@ -353,6 +353,8 @@
     <Compile Include="InfectionVectors\DF_Environment\HediffComp_TemperatureInfection.cs" />
     <Compile Include="InfectionVectors\DF_Ingestion\HediffComp_IngestionContagion.cs" />
     <Compile Include="InfectionVectors\DF_Combat\HediffComp_OffensiveContagion.cs" />
+    <Compile Include="InfectionVectors\DF_Zoonosis\HediffComp_Zoonosis.cs" />
+    <Compile Include="InfectionVectors\DF_Zoonosis\Patch_Zoonosis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
