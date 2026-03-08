@@ -3,6 +3,10 @@
     <Operation Class="PatchOperationSequence">
         <operations>
 
+            // --------------------------------------------------------------------------
+            // 1. HEATSTROKE PREPARATION
+            // Switches the hediffClass to 'HediffWithComps' to allow component support.
+            // --------------------------------------------------------------------------
             <li Class="PatchOperationConditional">
                 <xpath>/Defs/HediffDef[defName="Heatstroke"]/hediffClass</xpath>
                 <match Class="PatchOperationReplace">
@@ -18,6 +22,7 @@
                     </value>
                 </nomatch>
             </li>
+            // Ensures the <comps> list exists for Heatstroke.
             <li Class="PatchOperationConditional">
                 <xpath>/Defs/HediffDef[defName="Heatstroke"]/comps</xpath>
                 <nomatch Class="PatchOperationAdd">
@@ -28,6 +33,10 @@
                 </nomatch>
             </li>
 
+            // --------------------------------------------------------------------------
+            // 2. HYPOTHERMIA PREPARATION
+            // Switches the hediffClass to 'HediffWithComps' to allow component support.
+            // --------------------------------------------------------------------------
             <li Class="PatchOperationConditional">
                 <xpath>/Defs/HediffDef[defName="Hypothermia"]/hediffClass</xpath>
                 <match Class="PatchOperationReplace">
@@ -43,6 +52,7 @@
                     </value>
                 </nomatch>
             </li>
+            // Ensures the <comps> list exists for Hypothermia.
             <li Class="PatchOperationConditional">
                 <xpath>/Defs/HediffDef[defName="Hypothermia"]/comps</xpath>
                 <nomatch Class="PatchOperationAdd">

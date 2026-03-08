@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+    // --------------------------------------------------------------------------
+    // 1. BODY PART ITEM PATCH
+    // Injects the contamination component into harvested body parts and implants.
+    // Targets natural, bionic, royal, and imperial prosthetic bases.
+    // --------------------------------------------------------------------------
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[@ParentName="BodyPartProstheticImperialBase" or @ParentName="BodyPartBionicImperialBase" or @ParentName="BodyPartRoyalBase" or @ParentName="BodyPartNaturalBase"]</xpath>
         <value>
@@ -10,6 +15,11 @@
         </value>
     </Operation>
 
+    // --------------------------------------------------------------------------
+    // 2. DISEASE TRANSMISSION PATCH (EXAMPLE: FLU)
+    // Marks the Flu as a disease capable of contaminating harvested organs.
+    // Configured to also infect artificial parts (bionics) for maximum lethality.
+    // --------------------------------------------------------------------------
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/HediffDef[defName="Flu"]</xpath>
         <value>
