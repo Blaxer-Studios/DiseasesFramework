@@ -1,35 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-    // --------------------------------------------------------------------------
-    // 1. BODY PART ITEM PATCH
-    // Injects the contamination component into harvested body parts and implants.
-    // Targets natural, bionic, royal, and imperial prosthetic bases.
-    // --------------------------------------------------------------------------
+    <!-- Body part item patch -->
+    <!-- Injects the contamination component into harvested body parts and implants -->
+    <!-- Targets natural, bionic, royal, and imperial prosthetic bases -->
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[@ParentName="BodyPartProstheticImperialBase" or @ParentName="BodyPartBionicImperialBase" or @ParentName="BodyPartRoyalBase" or @ParentName="BodyPartNaturalBase"]</xpath>
         <value>
             <comps>
                 <li Class="DiseasesFramework.InfectionVectors.DF_Surgery.CompProperties_ContaminatedBodyPart"/>
-            </comps>
-        </value>
-    </Operation>
-
-    // --------------------------------------------------------------------------
-    // 2. DISEASE TRANSMISSION PATCH (EXAMPLE: FLU)
-    // Marks the Flu as a disease capable of contaminating harvested organs.
-    // Configured to also infect artificial parts (bionics) for maximum lethality.
-    // --------------------------------------------------------------------------
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/HediffDef[defName="Flu"]</xpath>
-        <value>
-            <comps>
-                <li Class="DiseasesFramework.InfectionVectors.DF_Surgery.HediffCompProperties_OrganContagion">
-                    <infectionChance>1.0</infectionChance>
-                    <sendNotification>true</sendNotification>
-                    <useLetterInsteadOfMessage>false</useLetterInsteadOfMessage>
-                    <canInfectArtificialPart>true</canInfectArtificialPart>
-                </li>
             </comps>
         </value>
     </Operation>

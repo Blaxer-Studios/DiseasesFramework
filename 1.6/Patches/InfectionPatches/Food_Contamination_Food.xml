@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-    // --------------------------------------------------------------------------
-    // 1. MEAL AND PROCESSED FOOD PATCH
-    // Injects Ingestion Contagion logic into Meals, Pemmican, and Kibble.
-    // --------------------------------------------------------------------------
+    <!-- Meal and processed food patch -->
+    <!-- Injects ingestion contagion logic into meals, pemmican, and kibble -->
     <Operation Class="PatchOperationSequence">
         <operations>
 
-            // Checks for ingestible items defined as Meals, inheriting from MealBase, or specific defNames.
+            <!-- Checks for ingestable items definited as Meals, inhereting from Mealbase, or specific defNames -->
             <li Class="PatchOperationConditional">
                 <xpath>/Defs/ThingDef[ingestible/foodType="Meal" or @ParentName="MealBase" or defName="Pemmican" or defName="Kibble"]/comps</xpath>
 
-                // Case A: The item already has a <comps> tag. Adds the component to the existing list.
                 <match Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[ingestible/foodType="Meal" or @ParentName="MealBase" or defName="Pemmican" or defName="Kibble"]/comps</xpath>
                     <value>
@@ -22,7 +19,6 @@
                     </value>
                 </match>
 
-                // Case B: The item is missing the <comps> tag. Creates the tag and adds the component.
                 <nomatch Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[ingestible/foodType="Meal" or @ParentName="MealBase" or defName="Pemmican" or defName="Kibble"]</xpath>
                     <value>

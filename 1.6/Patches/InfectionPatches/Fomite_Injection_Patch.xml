@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-    // --------------------------------------------------------------------------
-    // 1. APPAREL PATCH
-    // Injects Fomite logic into all apparel inheriting from ApparelBase.
-    // --------------------------------------------------------------------------
+    <!-- Apparel patch -->
+    <!-- Injects fomite logic into all apparel inheriting from ApparelBase -->
     <Operation Class="PatchOperationSequence">
         <operations>
-            // Checks if the <comps> tag exists; if not, creates it to prevent errors.
             <li Class="PatchOperationConditional">
                 <xpath>/Defs/ThingDef[@Name="ApparelBase"]/comps</xpath>
                 <nomatch Class="PatchOperationAdd">
@@ -16,7 +13,8 @@
                     </value>
                 </nomatch>
             </li>
-            // Adds the Fomite component with a 2-day pathogen decay period for apparel.
+
+            <!-- Adds the fomite component with a 2-day pathogen decay period for apparel -->
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[@Name="ApparelBase"]/comps</xpath>
                 <value>
@@ -28,13 +26,10 @@
         </operations>
     </Operation>
 
-    // --------------------------------------------------------------------------
-    // 2. BEDS PATCH
-    // Injects Fomite logic into all objects functioning as beds.
-    // --------------------------------------------------------------------------
+    <!-- Beds patch -->
+    <!-- Injects fomite logic into all objects functioning as beds -->
     <Operation Class="PatchOperationSequence">
         <operations>
-            // Finds any ThingDef using the Building_Bed class and ensures it has <comps>.
             <li Class="PatchOperationConditional">
                 <xpath>//ThingDef[thingClass="Building_Bed"]/comps</xpath>
                 <nomatch Class="PatchOperationAdd">
@@ -44,7 +39,8 @@
                     </value>
                 </nomatch>
             </li>
-            // Adds the Fomite component with a 3-day pathogen decay period for beds.
+
+            <!-- Adds the fomite component with a 3-day pathogen decay period for beds -->
             <li Class="PatchOperationAdd">
                 <xpath>//ThingDef[thingClass="Building_Bed"]/comps</xpath>
                 <value>
@@ -55,4 +51,5 @@
             </li>
         </operations>
     </Operation>
+
 </Patch>
