@@ -19,6 +19,9 @@
     <!-- FomiteContagion -->
     <DF_FomiteInfection_Message>{0} has contracted {1} through contact with a contaminated object ({2}).</DF_FomiteInfection_Message>
     <DF_FomiteInfection_LetterLabel>Contact infection</DF_FomiteInfection_LetterLabel>
+    <DF_DisinfectBed_Option>Disinfect {0}</DF_DisinfectBed_Option>
+    <DF_DisinfectBed_JobReport>disinfecting {0}.</DF_DisinfectBed_JobReport>
+    <DF_BedDisinfected>You have successfully disinfected: {0}</DF_BedDisinfected>
     <!-- IngestionContagion -->
     <DF_FoodInfection_Message>{0} contracted {1} from contaminated food.</DF_FoodInfection_Message>
     <DF_FoodInfection_LetterLabel>Food Contamination!</DF_FoodInfection_LetterLabel>

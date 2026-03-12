@@ -337,6 +337,8 @@
   <ItemGroup>
     <Compile Include="Core\DiseasesFrameworkCore.cs" />
     <Compile Include="Core\DiseasesFramework_Init.cs" />
+    <Compile Include="InfectionVectors\DF_Fomites\JobDriver_DisinfectBed.cs" />
+    <Compile Include="InfectionVectors\DF_Fomites\FloatMenu_Fomite_Patch.cs" />
     <Compile Include="InfectionVectors\DF_Surgery\Patch_BionicContagion.cs" />
     <Compile Include="InfectionVectors\DF_Corpses\Patch_CorpseContagion.cs" />
     <Compile Include="InfectionVectors\DF_Ingestion\Patch_IngestionContagion.cs" />

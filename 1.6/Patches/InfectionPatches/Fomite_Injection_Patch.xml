@@ -52,4 +52,28 @@
         </operations>
     </Operation>
 
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/HediffDef[defName="Flu"]/comps</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/HediffDef[defName="Flu"]</xpath>
+                    <value>
+                        <comps />
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/HediffDef[defName="Flu"]/comps</xpath>
+                <value>
+                    <li Class="DiseasesFramework.InfectionVectors.DF_Fomites.HediffCompProperties_FomiteContagion">
+                        <contaminateInterval>2500</contaminateInterval>
+                        <sendNotification>true</sendNotification>
+                        <useLetterInsteadOfMessage>false</useLetterInsteadOfMessage>
+                    </li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
 </Patch>
